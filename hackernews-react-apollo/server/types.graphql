@@ -1,0 +1,11 @@
+# Every type annotated with the @model-directive will be mapped to the database 
+# and corresponding CRUD-operations are added to the GraphQL API of your Graphcool service.
+
+type Link @model {
+  id: ID! @isUnique     # required system field (read-only)
+  createdAt: DateTime!  # optional system field (read-only)
+  updatedAt: DateTime!  # optional system field (read-only)
+
+  description: String!
+  url: String!
+}
